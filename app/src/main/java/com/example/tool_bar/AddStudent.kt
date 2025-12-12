@@ -11,15 +11,9 @@ class AddStudent : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_student)
+        tbToolbar = findViewById(R.id.tbToolbar)
 
-        tbToolbar = findViewById(R.id.toolbar)
-
-        setSupportActionBar(tbToolbar)
-
-        val actionBar = supportActionBar
-        actionBar?.title = " Add Student"
-        actionBar?.setDisplayHomeAsUpEnabled(true)
-
+        tbToolbar.title = " Add Student"
         tbToolbar.setNavigationIcon(R.drawable.baseline_arrow_back_24)
 
         tbToolbar.setNavigationOnClickListener {

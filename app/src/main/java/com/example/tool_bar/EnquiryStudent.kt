@@ -12,14 +12,10 @@ class EnquiryStudent : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enquiry_student)
+        tbToolbar = findViewById(R.id.tbToolbar)
 
-        tbToolbar = findViewById(R.id.toolbar)
 
-        setSupportActionBar(tbToolbar)
-
-        val actionBar = supportActionBar
-        actionBar?.title = " Enquiry Student"
-
+        tbToolbar.title = " Enquiry Student"
         tbToolbar.setNavigationIcon(R.drawable.baseline_arrow_back_24)
 
         tbToolbar.setNavigationOnClickListener {

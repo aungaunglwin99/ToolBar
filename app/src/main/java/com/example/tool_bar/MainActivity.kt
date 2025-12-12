@@ -8,20 +8,17 @@ import androidx.appcompat.widget.Toolbar
 
 
 class MainActivity : AppCompatActivity() {
-        lateinit var btAdd: Button
-        lateinit var btEnquiry: Button
-        lateinit var tbToolbar: Toolbar
+    lateinit var btAdd: Button
+    lateinit var btEnquiry: Button
+    lateinit var tbToolbar: Toolbar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btAdd = findViewById(R.id.btAdd)
         btEnquiry = findViewById(R.id.btEnquiry)
-        tbToolbar = findViewById(R.id.toolbar)
+        tbToolbar = findViewById(R.id.tbToolbar)
 
-        setSupportActionBar(tbToolbar)
-
-        val actionBar = supportActionBar
-        actionBar?.title = " Welcome !!!"
+        tbToolbar.title = " Welcome !!!"
 
         btAdd.setOnClickListener {
             startActivity(Intent(this@MainActivity, AddStudent::class.java))
